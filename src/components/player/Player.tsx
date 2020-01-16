@@ -14,7 +14,7 @@ const Player: React.FC<{}> = () => {
         <div>
             {service.status === 'loading' && <div>Loading...</div>}
             {service.status === 'loaded' &&
-                service.payload.sheetData.player
+                service.payload.player
                     .filter((player) => player.username === params.username)
                     .map(player => (
                         <div key={player.id}>{player.username} {player.points}</div>
